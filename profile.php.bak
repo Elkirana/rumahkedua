@@ -1,0 +1,46 @@
+<?php include 'include/header.php'; 
+if (!isset($_SESSION['user'])) {
+   echo '<script language="javascript">document.location="./";</script>';
+   include 'include/footer';
+   die();
+}else{
+   echo "";
+}
+?>
+<div id="page">
+<section id="main">
+   <!--V2-->
+   <!-- Breadcrumb -->
+   <div class="container">
+      <ol class="breadcrumb kata-bunda-atas breadcrumb-ibunda-detail">
+         <li><a href="profile.php"><em>profil</em></a></li>
+         <li class="active"><em> <?php echo $data_user['nama_lengkap'];?></em></li>
+      </ol>
+   </div>
+   <!--End Breadcrumb-->
+   <div class="container profil">
+      <div class="col-sm-offset-5 col-sm-2 col-xs-offset-3 col-xs-6 text-center">
+         <img src="assets/home/images/co4.png" class="img-responsive" />
+      </div>
+      <div class="col-sm-12 col-xs-12 text-center">
+         <div class="theme">
+            <h3> <?php echo $data_user['nama_lengkap'];?></h3>
+         </div>
+         <!-- <h5><a class="edit" href="edit">Edit Profil</a></h5> -->
+      </div>
+   </div>
+   <div class="container profil-content">
+      <ul class="nav nav-tabs" role="tablist">
+         <li role="presentation" class="active"><a href="#curhatku" aria-controls="curhatku" data-toggle="tab">History Chat</a></li>
+      </ul>
+      <div class="tab-content list-curhatku">
+         <div role="tabpanel" id="curhatku" class="tab-pane fade in active">
+            <p>as</p>
+         </div>
+         
+      </div>
+   </div>
+</section>
+<!--  #main -->
+</div><!-- .wrap < #main -->
+<?php include 'include/footer.php'; ?>
